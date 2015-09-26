@@ -1,0 +1,47 @@
+private int a [];
+An array declaration tells the compiler the array’s name and what type its elements will be not the number of elements in the array.
+
+
+boolean results[ ] = new boolean [ ] {true, false, true};
+
+float[ ]f1 = new float[3]; correct
+float f2[ ] = new float[ ]; wrong, no size mentioned
+float[ ] f = new float(3); wrong brackets
+float f[ ][ ][ ] = new float[3][][]; correct
+
+****************************************************************************
+private
+makes a member accessible only from within its own class
+
+protected
+makes a member accessible only to classes in the same package or subclass of the class 
+
+default access
+is very similar to protected (make sure you spot the difference) default access makes a member accessible only to classes in the same package (not to subclasses)
+
+public
+means that all other classes regardless of the package that they belong to, can access the member (assuming the class itself is visible) 
+
+final
+makes it impossible to extend a class, when applied to a method it prevents a method from being overridden in a subclass, when applied to a variable it makes it impossible to reinitialise a variable once it has been initialised abstract declares a method that has not been implemented 
+
+transient
+indicates that a variable is not part of the persistent state of an object
+volatile
+indicates that a thread must reconcile its working copy of the field with the master copy every time it accesses the variable
+
+*****************************************************************************
+you can always cast up the hierarchy tree
+
+non-static variables cannot be referenced from a static context
+
+Static inner classes do not have any reference to an enclosing instance, therefore you cannot use the this keyword, either implied or explicit.
+
+method variables do not have a modifier (always local)
+
+
+static:
+can call only other static methods
+can access only static data
+cannot use 'this' or 'super'
+
